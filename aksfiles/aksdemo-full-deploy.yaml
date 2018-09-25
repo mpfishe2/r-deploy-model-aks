@@ -8,7 +8,7 @@ spec:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
-  minReadySeconds: 5 
+  minReadySeconds: 5
   template:
     metadata:
       labels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: aksdemo-model-deploy
-        image: mpfacr.azurecr.io/mpfplumber:c2
+        image: <acr-registry>/mpfplumber:c2
         ports:
         - containerPort: 8000
         resources:
@@ -30,26 +30,10 @@ kind: Service
 metadata:
   name: aksdemo-model-deploy
 spec:
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP
     targetPort: 8000
   selector:
     app: aksdemo-model-deploy
-  type: ClusterIP
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: aksdemo-model-deploy
-  annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
-spec:
-  rules:
-  - host: hostname.dnslocation
-    http:
-      paths:
-      - backend:
-          serviceName: aksdemo-model-deploy
-          servicePort: 80
-        path: /predict
