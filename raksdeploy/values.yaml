@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: mpfacr.azurecr.io/mpfplumber
+  repository: <your-acr-registry>/mpfplumber
   tag: c2
   pullPolicy: IfNotPresent
 
