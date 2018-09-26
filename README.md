@@ -1,4 +1,4 @@
-# r-deploy-model-aks
+# Deploying R Machine Learning Model with Plumber and Azure Kubernetes Service
 
 ## Deploying and Serving R Models to AKS with Plumber
 
