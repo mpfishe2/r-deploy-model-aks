@@ -16,6 +16,12 @@
 
 ### Instructions
 
-1. Pull the image from Docker Hub: `docker pull mpfishe2/mpfplumber`
-
-
+1. Clone this repository onto your local machine
+```shell
+git clone https://github.com/mpfishe2/r-deploy-model-aks.git
+```
+2. Make the cloned repository your working directory  
+```shell
+cd r-deploy-model-aks`
+```
+3. 
