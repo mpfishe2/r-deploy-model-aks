@@ -10,6 +10,9 @@
 ### Pre-requisites
 
 - Azure Subscription
+- Azure Kubernetes Service Cluster
+- `kubectl` and `helm` tools installed
+- Docker
 
 ### Instructions
 
