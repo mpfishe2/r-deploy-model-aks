@@ -3,7 +3,7 @@
 ## Deploying and Serving R Models to AKS with Plumber
 
 **Model code adapted from:** https://shirinsplayground.netlify.com/2018/01/plumber/  
-**Author of model**: Dr. Shirin Glander  
+**Author of model**: Dr. Shirin Glander   
 
 Azure Kubernetes Service (AKS) can be used to deploy and serve Machine Learning Models. R is a popular language for Machine Learning and using Plumber (https://www.rplumber.io/) you can construct an REST API to expose the Machine Learning model. Using Docker, the R model and the Plumber script can be containerized using Docker and served on Azure Kubernetes Service. The image is deployed through a Deployment object and exposed to the Internet thourgh a LoadBalancer object. 
 
